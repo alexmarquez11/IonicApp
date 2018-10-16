@@ -41,7 +41,7 @@ export class AuthServiceProvider {
  }
  public logout() {
   return Observable.create(observer => {
-    console.log("Hola Mundo");
+    //console.log("Hola Mundo");
     this.currentUser = null;
     observer.next(true);
     observer.complete();
