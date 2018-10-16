@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { LoginPage } from './../pages/login/login';
 import { PresupestoPage } from './../pages/presupesto/presupesto';
 import { FacturasPage } from './../pages/facturas/facturas';
@@ -24,6 +25,7 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
