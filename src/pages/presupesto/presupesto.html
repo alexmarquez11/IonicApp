@@ -16,12 +16,20 @@
       <button ion-button menuToggle="rightMenu">
 <ion-icon name="menu"></ion-icon>
 </button>
+<button ion-button (click)="logout()">
+    <ion-icon name="log-out" ></ion-icon>
+  </button>
+
     </ion-buttons>
+
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+    <ion-list>
+        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">{{p.title}} </button>
+      </ion-list>
 
 </ion-content>

@@ -4,7 +4,8 @@ import { PresupestoPage } from './presupesto';
 
 @NgModule({
   declarations: [
-    PresupestoPage,
+    PresupestoPage
+    
   ],
   imports: [
     IonicPageModule.forChild(PresupestoPage),

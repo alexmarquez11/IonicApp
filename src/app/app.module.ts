@@ -1,3 +1,5 @@
+import { NuevopresupuestoPage } from './../pages/presupesto/nuevopresupuesto/nuevopresupuesto';
+import { AdministracionPage } from './../pages/administracion/administracion';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginPage } from './../pages/login/login';
 import { PresupestoPage } from './../pages/presupesto/presupesto';
@@ -21,7 +23,9 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     ListPage,
     FacturasPage,
     PresupestoPage,
-    LoginPage
+    LoginPage,
+    AdministracionPage,
+    NuevopresupuestoPage
   ],
   imports: [
     BrowserModule,
@@ -35,7 +39,9 @@ import { AuthServiceProvider } from '../providers/auth-service/auth-service';
     ListPage,
     FacturasPage,
     PresupestoPage,
-    LoginPage
+    LoginPage,
+    AdministracionPage,
+    NuevopresupuestoPage
 
   ],
   providers: [

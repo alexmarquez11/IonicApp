@@ -1,3 +1,4 @@
+import { AdministracionPage } from './../pages/administracion/administracion';
 import { LoginPage } from './../pages/login/login';
 import { ListPage } from './../pages/list/list';
 import { Component, ViewChild } from '@angular/core';
@@ -17,7 +18,7 @@ export class MyApp {
 
   text: string = '';
 
-  rootPage: any = LoginPage;
+  rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -27,9 +28,10 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      { title: 'Presupuesto', component: ListPage },
+      { title: 'Presupuesto', component: PresupestoPage },
       { title: 'Facturas' , component: FacturasPage},
-      { title: 'Administracion' , component: PresupestoPage},
+      { title: 'Administracion' , component: AdministracionPage},
+      { title: 'Listas' , component: ListPage}
     ];
 
   }
