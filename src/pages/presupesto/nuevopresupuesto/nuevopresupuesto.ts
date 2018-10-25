@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 /**
  * Generated class for the NuevopresupuestoPage page.
@@ -15,11 +16,30 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class NuevopresupuestoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  NuevoPresu : FormGroup;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams,public formbuilder :FormBuilder) {
+
+    this.NuevoPresu = this.createNPresupuesto();
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad NuevopresupuestoPage');
-  }
+    private createNPresupuesto(){
+
+      return this.formbuilder.group({
+        NoDepartamento: ['', Validators.required],
+        departamento: ['', Validators.required],
+        coordinador: ['', Validators.required],
+        fecha: ['', Validators.required],
+        monto: ['', Validators.required]
+      })
+
+
+    }
+
+    saveData(){
+      console.log(this.NuevoPresu.value);
+    }
+
+    
 
 }

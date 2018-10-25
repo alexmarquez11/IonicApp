@@ -12,10 +12,8 @@
 <ion-icon name="menu"></ion-icon>
 </button>
     </ion-buttons>
-    <ion-buttons end>
-      <button ion-button menuToggle="rightMenu">
-<ion-icon name="menu"></ion-icon>
-</button>
+    <ion-buttons end >
+     
 <button ion-button (click)="logout()">
     <ion-icon name="log-out" ></ion-icon>
   </button>
@@ -30,6 +28,7 @@
 <ion-content padding>
     <ion-list>
         <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">{{p.title}} </button>
+        <ion-icon [name]="pages.icon" item-left></ion-icon>
       </ion-list>
 
 </ion-content>

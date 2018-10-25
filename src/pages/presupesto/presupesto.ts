@@ -22,7 +22,7 @@ export class PresupestoPage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
 
     this.pages =[
-      { title: 'Buscar Factura', component: NuevopresupuestoPage, icon: 'flask'}
+      { title: 'Nuevo Presupuesto ', component: NuevopresupuestoPage, icon: 'add'}
     ];
   }
 

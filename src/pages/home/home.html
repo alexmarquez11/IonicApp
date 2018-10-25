@@ -1,19 +1,28 @@
 <ion-header>
     <ion-navbar>
+      <ion-title>Sistema UMG</ion-title>
       <ion-buttons start>
         <button ion-button menuToggle="leftMenu">
   <ion-icon name="menu"></ion-icon>
   </button>
-      <button ion-button (click)="logout()">
+</ion-buttons>
+<ion-buttons end >
+      <button ion-button (click)="logout()" >
         <ion-icon name="log-out" ></ion-icon>
       </button>
   
-      </ion-buttons>
+    </ion-buttons>
     
     </ion-navbar>
   </ion-header>
   <ion-content padding class="getting-started">
-    Bienvenido
-    <br>
+    <ion-row class="logo-row">
+      <ion-col width-100>
+        <img src="https://i.pinimg.com/originals/c6/d6/ee/c6d6ee225945b897eb4902208e693a8c.jpg"/>
+
+      </ion-col>
+
+    </ion-row>
+    
     <!-- <ion-img with="100px" height="100px" src="/Users/alexx/Documents/Ionic/Proyecto/Proyecto/src/app/Imagenes/umg.png"></ion-img> -->
   </ion-content>

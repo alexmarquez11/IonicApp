@@ -5,14 +5,65 @@
   Ionic pages and navigation.
 -->
 <ion-header>
+    <ion-navbar>
+        <ion-buttons start>
+          <button ion-button menuToggle="leftMenu">
+    <ion-icon name="menu"></ion-icon>
+    </button>
+  </ion-buttons>
+<ion-buttons end  >
+        <button ion-button (click)="logout()" menuToglle="rightMenu">
+          <ion-icon name="log-out" ></ion-icon>
+        </button>
+      </ion-buttons>
 
-  <ion-navbar>
-    <ion-title>nuevopresupuesto</ion-title>
-  </ion-navbar>
+      
+      </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+
+  <form [formGroup]="NuevoPresu" (ngSubmit)="saveData()" >
+
+  <ion-list>
+
+      <ion-item>
+          <ion-icon name="logo-apple" item-start></ion-icon>
+          <ion-label stacket> No. Departamento:</ion-label>
+          <ion-input formControlName="NoDepartamento" type="number" placeholder="Numero"></ion-input>
+        </ion-item>
+
+    <ion-item>
+      <ion-icon name="people" item-start></ion-icon>
+      <ion-label stacket> Departamento:</ion-label>
+      <ion-input formControlName="departamento" type="text" placeholder="Departamento"></ion-input>
+    </ion-item>
+
+    <ion-item>
+        <ion-icon name="person" item-start></ion-icon>
+        <ion-label stacket> Coordinador:</ion-label>
+        <ion-input formControlName="coordinador" type="text" placeholder="Coordinador"></ion-input>
+      </ion-item>
+
+      <ion-item>
+          <ion-icon name="calendar" item-start></ion-icon>
+          <ion-label stacket> Fecha Ingreso:</ion-label>
+          <ion-input formControlName="fecha" type="date" displayFormat="MM-DD-YYYY" placeholder="Fecha"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-icon name="logo-usd" item-start></ion-icon>
+            <ion-label stacket> Monto Asignado:</ion-label>
+            <ion-input formControlName="monto" type="number" placeholder="Monto"></ion-input>
+          </ion-item>
+  </ion-list>
+
+  <div padding>
+    <button ion-button block type="submit" [disabled]="!NuevoPresu.valid"> Guardar</button>
+  </div>
+
+  </form>
 
 </ion-content>
